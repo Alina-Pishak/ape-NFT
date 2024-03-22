@@ -1,15 +1,94 @@
 @import-normalize;
 
+:root {
+  --color-primary: #fff;
+  --color-secondary: #1E1E1E;
+  --color-brand: #DC3B5A;
+  --color-background: #181818;
+  --color-background-action-dark: rgba(30, 30, 30, 0.1);
+  --color-background-action-light: rgba(255, 255, 255, 0.1);
+}
+
+@font-face {
+  font-family: "Biro Script";
+  src: local("Biro Script Plus"),
+    url("./fonts/BiroScript/BiroScriptPlus.ttf") format("truetype"),
+    url('./fonts/BiroScript/BiroScriptPlus.eot') format('embedded-opentype'),
+    url('./fonts/BiroScript/BiroScriptPlus.woff') format('woff'),
+    url('./fonts/BiroScript/BiroScriptPlus.woff2') format('woff2'),
+    url("./fonts/BiroScript/BiroScriptPlus-Bold.ttf") format("truetype"),
+    url('./fonts/BiroScript/BiroScriptPlus-Bold.eot') format('embedded-opentype'),
+    url('./fonts/BiroScript/BiroScriptPlus-Bold.woff') format('woff'),
+    url('./fonts/BiroScript/BiroScriptPlus-Bold.woff2') format('woff2'),
+}
+@font-face {
+  font-family: "Messina Sans";
+  src: local("Messina Sans"),
+    url('./fonts/MessinaSans/MessinaSansMono-Regular.ttf') format('true-type')
+}
+@font-face {
+  font-family: "Right Grotesk";
+  src: local("RightGrotesk"),
+    url('./fonts/RightGrotesk/RightGrotesk-CompactBlack.otf') format('opentype'), 
+    url('./fonts/RightGrotesk/RightGrotesk-Medium.otf') format('opentype'),
+    url('./fonts/RightGrotesk/RightGrotesk-NarrowLight.otf') format('opentype'),
+    url('./fonts/RightGrotesk/rightgrotesk-spatialblack.otf') format('opentype'),
+    url('./fonts/RightGrotesk/RightGrotesk-TightMedium.otf') format('opentype')
+    url('./fonts/RightGrotesk/RightGrotesk-WideMedium.otf') format('opentype')  
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "Right Grotesk", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: var(--color-background);
+  color: var(--color-primary);
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: 'Right Grotesk', sans-serif;
+  color: var(--color-primary);
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+ul, ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  display: block;
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  line-height: 0;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 480px;
+  padding-left: 72px;
+  padding-right: 72px;
+  margin-left: auto;
+  margin-right: auto;
 }
