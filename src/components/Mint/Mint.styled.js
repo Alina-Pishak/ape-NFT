@@ -3,6 +3,14 @@ import styled from "styled-components";
 export const MintSection = styled.section`
   padding-top: 30px;
   padding-bottom: 30px;
+  @media (min-width: 768px) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  @media (min-width: 1280px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 `;
 
 export const MintText = styled.p`
@@ -12,6 +20,16 @@ export const MintText = styled.p`
   text-transform: uppercase;
   text-align: center;
   margin-bottom: 16px;
+  @media (min-width: 768px) {
+    width: 383px;
+    margin: 0 auto;
+    margin-bottom: 24px;
+  }
+  @media (min-width: 1280pz) {
+    font-size: 24px;
+    line-height: 1.21;
+    margin-bottom: 40px;
+  }
 `;
 
 export const MintBtn = styled.button`
@@ -25,6 +43,17 @@ export const MintBtn = styled.button`
   border: none;
   width: 216px;
   height: 41px;
+  margin: 0 auto;
+  @media (min-width: 768px) {
+    width: 247px;
+  }
+  @media (min-width: 1280px) {
+    font-size: 28px;
+    line-height: 1.21;
+    border-radius: 12px;
+    width: 397px;
+    height: 70px;
+  }
 `;
 
 export const MintInput = styled.input`
@@ -34,7 +63,8 @@ export const MintInput = styled.input`
   line-height: 1.17;
   text-transform: uppercase;
   border: 1px solid
-    ${({ error }) => (error ? "var(--color-brand)" : "var(--color-secondary)")};
+    ${({ $error }) =>
+      $error ? "var(--color-brand)" : "var(--color-secondary)"};
   border-radius: 0 8px 8px 0;
   padding: 22px 24px;
   width: 168px;
@@ -48,10 +78,22 @@ export const MintInput = styled.input`
   &::placeholder {
     color: rgba(255, 255, 255, 0.24);
   }
+  @media (min-width: 768px) {
+    width: 200px;
+  }
+  @media (min-width: 1280px) {
+    width: 333px;
+    height: 64px;
+    &::placeholder {
+      font-size: 16px;
+      line-height: 1.19;
+    }
+  }
 `;
 
 export const MintInputWrapper = styled.div`
   display: flex;
+  justify-content: center;
   margin-bottom: 16px;
 `;
 
@@ -62,6 +104,10 @@ export const MintIconWrapper = styled.div`
   height: 48px;
   backdrop-filter: blur(12px);
   background: var(--color-secondary);
+  @media (min-width: 1280px) {
+    width: 64px;
+    height: 64px;
+  }
 `;
 
 export const MintDiscord = styled.svg`

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { HeaderLinkItem, OpenMenuBtn } from "../Header/Header.styled";
+import { HeaderLinkItem, MenuBtn } from "../Header/Header.styled";
 
 export const MobileMenuContainer = styled.div`
   position: fixed;
@@ -8,9 +8,10 @@ export const MobileMenuContainer = styled.div`
   z-index: 1000;
   top: 0;
   left: 0;
-  padding: 16px;
   display: flex;
+  flex-direction: column;
   background-color: var(--color-secondary);
+  padding-top: 54px;
   /* transition: opacity var(--transition-dur-and-func),
     visiblity var(--transition-dur-and-func); */
 `;
@@ -23,7 +24,7 @@ export const MobileMenuLinkItem = styled(HeaderLinkItem)`
   background-color: var(--color-background-action-light);
 `;
 
-export const CloseMenuBtn = styled(OpenMenuBtn)`
+export const CloseMenuBtn = styled(MenuBtn)`
   color: #fff;
 `;
 
@@ -46,6 +47,7 @@ export const NavList = styled.ul`
   align-items: center;
   flex-direction: column;
   gap: 16px;
+  margin-bottom: 105px;
 `;
 
 export const NavListItem = styled.li``;

@@ -1,8 +1,8 @@
 import sprite from "../../img/symbol-defs.svg";
+import Footer from "../Footer/Footer";
 import {
   HeaderContainer,
   HeaderLink,
-  HeaderLinkItem,
   HeaderLinkList,
 } from "../Header/Header.styled";
 import {
@@ -73,6 +73,7 @@ const MobileMenu = ({ onClose }) => {
           <NavLink href="#mint">MINT</NavLink>
         </NavListItem>
       </NavList>
+      <Footer />
     </MobileMenuContainer>
   );
 };

@@ -86,9 +86,26 @@ a {
 }
 
 .container {
-  max-width: 480px;
+  /* max-width: 480px; */
+  max-width: 360px;
   padding-left: 72px;
   padding-right: 72px;
   margin-left: auto;
   margin-right: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .container{
+    max-width: 768px;
+    padding-left: 88px;
+    padding-right: 88px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .container {
+    max-width: 1440px;
+    padding-left: 204px;
+    padding-right: 204px;
+  }
 }

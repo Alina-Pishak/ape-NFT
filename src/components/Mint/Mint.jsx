@@ -4,7 +4,6 @@ import sprite from "../../img/symbol-defs.svg";
 import {
   MintBtn,
   MintDiscord,
-  MintIcon,
   MintIconWrapper,
   MintInput,
   MintInputWrapper,
@@ -12,6 +11,7 @@ import {
   MintText,
 } from "./Mint.styled";
 import * as yup from "yup";
+import { Notify } from "notiflix/build/notiflix-notify-aio";
 
 const Mint = () => {
   const formik = useFormik({
@@ -34,7 +34,8 @@ const Mint = () => {
         .required("Required"),
     }),
     onSubmit: (values) => {
-      console.log(JSON.stringify(values, null, 2));
+      Notify.success(`Thank for the mint ${values.username}. `);
+      formik.resetForm();
     },
   });
   return (
@@ -55,17 +56,13 @@ const Mint = () => {
             </MintDiscord>
           </MintIconWrapper>
           <MintInput
-            // type="email"
             name="username"
             placeholder="@username"
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
             value={formik.values.username}
-            error={formik.touched.username && formik.errors.username}
+            $error={formik.touched.username && formik.errors.username}
           />
-          {/* {formik.touched.username && formik.errors.username ? (
-            <div>{formik.errors.username}</div>
-          ) : null} */}
         </MintInputWrapper>
         <MintInputWrapper>
           <MintIconWrapper>
@@ -82,9 +79,6 @@ const Mint = () => {
             value={formik.values.address}
             $error={formik.touched.address && formik.errors.address}
           />
-          {/* {formik.touched.address && formik.errors.address ? (
-            <div>{formik.errors.address}</div>
-          ) : null} */}
         </MintInputWrapper>
         <MintBtn type="submit">MINT</MintBtn>
       </form>

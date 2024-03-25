@@ -6,25 +6,39 @@ import {
   SliderBtnList,
   Title,
 } from "../../App.styled";
-import { images } from "../../data/images";
-import { ArtsImg } from "./Arts.styled";
-
+import { imagesArts } from "../../data/images";
+import { ArtsImg, ArtsSection } from "./Arts.styled";
+import { useMediaQuery } from "react-responsive";
+console.log(imagesArts);
 const Arts = () => {
+  const isMobileScreen = useMediaQuery({ query: "(max-width: 768px)" });
+  const isTabletScreen = useMediaQuery({ query: "(max-width: 1280px)" });
+
   return (
-    <section className="container">
+    <ArtsSection className="container">
       <Title>Collection</Title>
       <CarouselProvider
-        naturalSlideWidth={216}
-        naturalSlideHeight={256}
+        naturalSlideWidth={isMobileScreen ? 216 : isTabletScreen ? 284 : 240}
+        naturalSlideHeight={isMobileScreen ? 256 : isTabletScreen ? 336 : 280}
         isIntrinsicHeight
         totalSlides={14}
-        // This number can be float to let next slide show
-        visibleSlides={1}
+        visibleSlides={isMobileScreen ? 1 : isTabletScreen ? 2 : 4}
       >
-        <Slider classNameTray="tray" style={{ marginBottom: "24px" }}>
-          {images.map(({ img }, index) => (
+        <Slider classNameTray="tray">
+          {imagesArts.map(({ tablet, desktop }, index) => (
             <MainSlide key={index} className="slide" index={0}>
-              <ArtsImg src={img} alt="" width={216} height={256} />
+              <picture>
+                <source
+                  srcSet={`${desktop[0]} 1x,${desktop[1]} 2x`}
+                  media="(min-width: 1280px)"
+                />
+                <source
+                  srcSet={`${tablet[0]} 1x,${tablet[1]} 2x`}
+                  media="(max-width: 1279px)"
+                />
+                <ArtsImg src={tablet[0]} alt="Monkey" />
+              </picture>
+              {/* <ArtsImg src={img} alt="Monkey" /> */}
             </MainSlide>
           ))}
         </Slider>
@@ -36,10 +50,8 @@ const Arts = () => {
             <NextBtn>Next</NextBtn>
           </li>
         </SliderBtnList>
-        {/* <PrevBtn>Prev</PrevBtn>
-        <NextBtn>Next</NextBtn> */}
       </CarouselProvider>
-    </section>
+    </ArtsSection>
   );
 };
 

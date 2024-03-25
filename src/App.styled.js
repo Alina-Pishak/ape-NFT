@@ -8,6 +8,22 @@ export const Title = styled.h2`
   text-transform: uppercase;
   text-align: center;
   margin-bottom: 24px;
+  @media (min-width: 768px) {
+    font-size: 80px;
+    line-height: 1;
+    margin-bottom: 40px;
+  }
+  @media (min-width: 1280px) {
+    font-size: 160px;
+    margin-bottom: 80px;
+  }
+`;
+
+export const MainText = styled.p`
+  font-family: "Messina Sans", sans-serif;
+  font-size: 12px;
+  line-height: 1.17;
+  text-transform: uppercase;
 `;
 
 export const CrossIcon = styled.svg`
@@ -15,11 +31,18 @@ export const CrossIcon = styled.svg`
   margin: 0 auto;
   margin-bottom: 16px;
   fill: var(--color-primary);
+  @media (min-width: 768px) {
+    margin-bottom: 24px;
+  }
+  @media (min-width: 1280px) {
+    width: 36px;
+    height: 36px;
+    margin-bottom: 36px;
+  }
 `;
 
 export const MainSlide = styled(Slide)`
   border-radius: 12px;
-  width: 216px;
 `;
 
 export const PrevBtn = styled(ButtonBack)`
@@ -29,6 +52,9 @@ export const PrevBtn = styled(ButtonBack)`
   border: none;
   background: none;
   color: var(--color-primary);
+  @media (min-width: 768px) {
+    line-height: 1.25;
+  }
 `;
 
 export const NextBtn = styled(ButtonNext)`
@@ -42,5 +68,7 @@ export const NextBtn = styled(ButtonNext)`
 
 export const SliderBtnList = styled.ul`
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
+  gap: 48px;
 `;

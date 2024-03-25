@@ -1,40 +1,17 @@
 import { useState } from "react";
 import { Title } from "../../App.styled";
 import {
+  FaqImg,
   FaqItem,
   FaqItemText,
   FaqItemTitle,
   FaqList,
   FaqSection,
 } from "./Faq.styled";
+import { faqsData } from "../../data/faqs";
 
 const Faq = () => {
-  const [faqs, setFaqs] = useState([
-    {
-      question: "WHAT IS AN NFT COLLECTION?",
-      answer:
-        " An NFT collection is a group of unique digital assets, each represented by a non-fungible token, typically created around a specific theme or style.",
-      open: true,
-    },
-    {
-      question: "HOW DO I PURCHASE NFTS FROM A COLLECTION?",
-      answer:
-        " To purchase nfts from a collection, you typically need to use cryptocurrency on a blockchain0based marketplace.",
-      open: false,
-    },
-    {
-      question: "CAN I SELL OR TRADE NFTS FROM A COLLECTION?",
-      answer:
-        "  Yes, you can sell or trade NFTs from a collection like you would other digital assets.",
-      open: false,
-    },
-    {
-      question: "WHAT RIGHTS DO I HAVE AS AN OWNER OF AN NFT?",
-      answer:
-        " As an NFT owner, you can own, transfer, potentially access exclusive content, resell, but don't automatically get copyright or intellectual property rights.",
-      open: false,
-    },
-  ]);
+  const [faqs, setFaqs] = useState(faqsData);
 
   const toggleFAQ = (index) => {
     setFaqs(
@@ -54,8 +31,36 @@ const Faq = () => {
     <FaqSection className="container">
       <Title>FAQ</Title>
       <FaqList>
-        {faqs.map(({ question, answer, open }, index) => (
+        {faqs.map(({ img, question, answer, open }, index) => (
           <FaqItem key={index} onClick={() => toggleFAQ(index)} open={open}>
+            <picture>
+              <source
+                srcSet={`${img[0]} 1x,${img[1]} 2x`}
+                media="(min-width: 1280px)"
+              />
+              <source
+                srcSet={`${img[0]} 1x,${img[1]} 2x`}
+                media="(min-width: 768px)"
+              />
+              <source
+                srcSet={`${img[0]} 1x,${img[1]} 2x`}
+                media="(max-width: 767px)"
+              />
+              <FaqImg
+                src={img[0]}
+                alt="Monkey"
+                // width={148}
+                // height={183}
+                open={open}
+              />
+            </picture>
+            {/* <FaqImg
+              src={img}
+              alt="Monkey"
+              width={148}
+              height={183}
+              open={open}
+            /> */}
             <div>
               <FaqItemTitle open={open}>{question}</FaqItemTitle>
               <FaqItemText open={open}>{answer}</FaqItemText>

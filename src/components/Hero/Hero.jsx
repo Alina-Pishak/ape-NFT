@@ -1,3 +1,4 @@
+import { heroImg } from "../../data/images";
 import {
   HeroBtn,
   HeroImg,
@@ -7,7 +8,6 @@ import {
   HeroTitle,
   ImgBtnWrapper,
 } from "./Hero.styled";
-import img from "../../img/hero-monkey.png";
 
 const Hero = () => {
   return (
@@ -16,13 +16,27 @@ const Hero = () => {
       <HeroTitle>YACHT APES</HeroTitle>
       <HeroSecondTitle>Apes aRe eveRywhere</HeroSecondTitle>
       <ImgBtnWrapper>
-        <HeroImg src={img} alt="Monkey" />
+        <picture>
+          <source
+            srcSet={`${heroImg.imgDesktop[0]} 1x,${heroImg.imgDesktop[1]} 2x`}
+            media="(min-width: 1280px)"
+          />
+          <source
+            srcSet={`${heroImg.imgTablet[0]} 1x,${heroImg.imgTablet[1]} 2x`}
+            media="(min-width: 768px)"
+          />
+          <source
+            srcSet={`${heroImg.imgMobile[0]} 1x,${heroImg.imgMobile[1]} 2x`}
+            media="(max-width: 767px)"
+          />
+          <HeroImg src={heroImg.imgMobile[0]} alt="Monkey" />
+        </picture>
+        <HeroText>
+          Yacht Ape is a collection of unique digital apes that you can own in
+          NFT format
+        </HeroText>
         <HeroBtn type="button">MEET APES</HeroBtn>
       </ImgBtnWrapper>
-      <HeroText>
-        Yacht Ape is a collection of unique digital apes that you can own in NFT
-        format
-      </HeroText>
     </HeroSection>
   );
 };
