@@ -14,7 +14,7 @@ import sprite from "../../img/symbol-defs.svg";
 
 const MindMap = () => {
   return (
-    <MindMapSection className="container">
+    <MindMapSection className="container" id="mind-map">
       <Title>MIND MAP</Title>
       <MediaQuery maxWidth={767}>
         <MindMapMobile />

@@ -14,7 +14,7 @@ const Arts = () => {
   const isTabletScreen = useMediaQuery({ query: "(max-width: 1280px)" });
 
   return (
-    <ArtsSection className="container">
+    <ArtsSection className="container" id="collection">
       <Title>Collection</Title>
       <CarouselProvider
         naturalSlideWidth={isMobileScreen ? 216 : isTabletScreen ? 284 : 240}

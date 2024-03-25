@@ -28,7 +28,7 @@ const Faq = () => {
   };
 
   return (
-    <FaqSection className="container">
+    <FaqSection className="container" id="faq">
       <Title>FAQ</Title>
       <FaqList>
         {faqs.map(({ img, question, answer, open }, index) => (

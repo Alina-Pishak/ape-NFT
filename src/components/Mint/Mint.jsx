@@ -56,7 +56,7 @@ const Mint = () => {
     }
   };
   return (
-    <MintSection className="container">
+    <MintSection className="container" id="mint">
       <Title>Are you in?</Title>
       <CrossIcon width={24} height={24}>
         <use href={`${sprite}#icon-cross`}></use>

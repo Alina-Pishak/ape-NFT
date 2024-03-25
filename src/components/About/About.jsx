@@ -16,7 +16,7 @@ import { aboutImg } from "../../data/images";
 
 const About = () => {
   return (
-    <AboutSection>
+    <AboutSection id="about">
       <AboutContent className="container">
         <AboutTextWrapper>
           <AboutTitle>
