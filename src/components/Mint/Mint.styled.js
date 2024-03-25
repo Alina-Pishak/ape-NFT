@@ -75,9 +75,10 @@ export const MintInput = styled.input`
   padding: 22px 24px;
   width: 168px;
   height: 48px;
-  background-color: transparent;
   background: none;
   color: inherit;
+  outline: none;
+  background-color: var(--color-background) !important;
   &:focus {
     border: 1px solid var(--color-primary);
   }
@@ -105,7 +106,9 @@ export const MintInputWrapper = styled.div`
 
 export const MintIconWrapper = styled.div`
   border-radius: 8px 0 0 8px;
-  padding: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 48px;
   height: 48px;
   backdrop-filter: blur(12px);

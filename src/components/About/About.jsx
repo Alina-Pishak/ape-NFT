@@ -1,5 +1,6 @@
 import React from "react";
 import {
+  AboutBanner,
   AboutContent,
   AboutIcon,
   AboutImg,
@@ -53,13 +54,7 @@ const About = () => {
           <AboutImg src={aboutImg.imgMobile[0]} alt="Monkey" />
         </picture>
       </AboutContent>
-      <div
-        style={{
-          width: "100%",
-          height: "52px",
-          background: "var(--color-brand)",
-        }}
-      ></div>
+      <AboutBanner></AboutBanner>
     </AboutSection>
   );
 };

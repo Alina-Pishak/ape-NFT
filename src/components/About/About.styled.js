@@ -126,3 +126,12 @@ export const AboutTextWrapper = styled.div`
     margin-bottom: 68px;
   }
 `;
+
+export const AboutBanner = styled.div`
+  width: 100%;
+  height: 52px;
+  background: var(--color-brand);
+  @media (min-width: 1280px) {
+    height: 86px;
+  }
+`;

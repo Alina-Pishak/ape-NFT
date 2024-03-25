@@ -40,7 +40,6 @@ const Mint = () => {
       setIsSuccess(true);
       Notify.success(`Thank for the mint ${values.username}. `);
       formik.resetForm();
-      setIsSuccess(null);
     },
   });
   const getContentButton = () => {
