@@ -35,7 +35,6 @@ export const HeroTitle = styled.h1`
   color: var(--color-secondary);
   @media (min-width: 768px) {
     font-size: 92px;
-    /* width: 591px; */
     text-align: justify;
   }
   @media (min-width: 1280px) {
@@ -72,6 +71,7 @@ export const HeroImg = styled.img`
 `;
 
 export const HeroBtn = styled.button`
+  font-family: inherit;
   font-weight: 900;
   font-size: 16px;
   line-height: 1.19;
@@ -83,6 +83,10 @@ export const HeroBtn = styled.button`
   border: none;
   position: absolute;
   bottom: 0;
+  transition: color var(--transition-dur-and-func);
+  &:hover {
+    color: var(--color-hover);
+  }
   @media (min-width: 768px) {
     border-radius: 12px;
     width: 190px;
@@ -97,6 +101,7 @@ export const HeroBtn = styled.button`
 `;
 
 export const HeroText = styled(MainText)`
+  font-family: "Messina Sans Dark", sans-serif;
   width: 217px;
   text-align: center;
   margin-top: 49px;

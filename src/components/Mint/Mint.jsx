@@ -12,8 +12,10 @@ import {
 } from "./Mint.styled";
 import * as yup from "yup";
 import { Notify } from "notiflix/build/notiflix-notify-aio";
+import { useState } from "react";
 
 const Mint = () => {
+  const [isSuccess, setIsSuccess] = useState(null);
   const formik = useFormik({
     initialValues: {
       username: "",
@@ -33,11 +35,26 @@ const Mint = () => {
         .trim()
         .required("Required"),
     }),
+
     onSubmit: (values) => {
+      setIsSuccess(true);
       Notify.success(`Thank for the mint ${values.username}. `);
       formik.resetForm();
+      setIsSuccess(null);
     },
   });
+  const getContentButton = () => {
+    if (
+      (formik.touched.address && formik.errors.address) ||
+      (formik.touched.username && formik.errors.username)
+    ) {
+      return "ERROR";
+    } else if (isSuccess === null) {
+      return "MINT";
+    } else if (isSuccess) {
+      return "MINT  ";
+    }
+  };
   return (
     <MintSection className="container">
       <Title>Are you in?</Title>
@@ -80,7 +97,7 @@ const Mint = () => {
             $error={formik.touched.address && formik.errors.address}
           />
         </MintInputWrapper>
-        <MintBtn type="submit">MINT</MintBtn>
+        <MintBtn type="submit">{getContentButton()}</MintBtn>
       </form>
     </MintSection>
   );

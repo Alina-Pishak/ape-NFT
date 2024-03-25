@@ -31,8 +31,6 @@ export const MindMapItem = styled.li`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  /* width: 284px;
-  height: 242px; */
   background: var(--color-secondary);
   &:last-child {
     background-color: var(--color-brand);

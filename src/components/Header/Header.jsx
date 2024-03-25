@@ -5,7 +5,6 @@ import {
   HeaderLinkItem,
   HeaderLinkList,
   HeaderLogo,
-  // HeaderLogo,
   HeaderSection,
   MenuBtn,
 } from "./Header.styled";

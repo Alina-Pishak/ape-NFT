@@ -16,6 +16,10 @@ export const HeaderSection = styled.header`
 `;
 
 export const HeaderLogo = styled.svg`
+  transition: fill var(--transition-dur-and-func);
+  &:hover {
+    fill: var(--color-hover);
+  }
   @media (min-width: 1280px) {
     width: 72px;
     height: 50px;
@@ -36,21 +40,6 @@ export const HeaderContainer = styled.div`
     padding: 24px 96px;
   }
 `;
-
-// export const HeaderLogo = styled.a``;
-
-// export const HeaderLinkWrapper = styled.ul`
-//   @media (min-width: 768px) {
-//     padding-top: 12px;
-//     position: absolute;
-//     z-index: 1000;
-//     right: 60px;
-//     border-radius: 12px;
-//     /* padding: 10px; */
-//     width: 288px;
-//     height: 48px;
-//   }
-// `;
 
 export const HeaderLinkList = styled.ul`
   @media (min-width: 768px) {
@@ -76,8 +65,13 @@ export const HeaderLinkItem = styled.li`
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
   &:not(:last-child) {
     margin-bottom: 8px;
+  }
+  transition: fill var(--transition-dur-and-func);
+  &:hover {
+    fill: var(--color-hover);
   }
   @media (min-width: 1280px) {
     width: 80px;
@@ -95,6 +89,10 @@ export const HeaderLink = styled.a`
     font-size: 12px;
     line-height: 1.17;
     color: var(--color-secondary);
+    transition: fill var(--transition-dur-and-func);
+    &:hover {
+      fill: var(--color-hover);
+    }
   }
   @media (min-width: 1280px) {
     font-size: 16px;
@@ -111,8 +109,20 @@ export const MenuBtn = styled.button`
   color: var(--color-secondary);
   border: none;
   background: none;
+  transition: color var(--transition-dur-and-func);
+  &:hover {
+    color: var(--color-hover);
+    text-decoration: underline;
+  }
   @media (min-width: 1280px) {
     font-size: 16px;
     line-height: 1.19;
+  }
+`;
+
+export const HeaderLinkIcon = styled.svg`
+  transition: fill var(--transition-dur-and-func);
+  &:hover {
+    fill: var(--color-hover);
   }
 `;

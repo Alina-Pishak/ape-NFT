@@ -21,6 +21,7 @@ export const Title = styled.h2`
 
 export const MainText = styled.p`
   font-family: "Messina Sans", sans-serif;
+  font-weight: 400;
   font-size: 12px;
   line-height: 1.17;
   text-transform: uppercase;

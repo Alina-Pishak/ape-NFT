@@ -9,7 +9,6 @@ import {
 import { imagesArts } from "../../data/images";
 import { ArtsImg, ArtsSection } from "./Arts.styled";
 import { useMediaQuery } from "react-responsive";
-console.log(imagesArts);
 const Arts = () => {
   const isMobileScreen = useMediaQuery({ query: "(max-width: 768px)" });
   const isTabletScreen = useMediaQuery({ query: "(max-width: 1280px)" });
@@ -38,7 +37,6 @@ const Arts = () => {
                 />
                 <ArtsImg src={tablet[0]} alt="Monkey" />
               </picture>
-              {/* <ArtsImg src={img} alt="Monkey" /> */}
             </MainSlide>
           ))}
         </Slider>

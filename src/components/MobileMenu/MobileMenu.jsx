@@ -7,9 +7,7 @@ import {
 } from "../Header/Header.styled";
 import {
   CloseMenuBtn,
-  MenuDiscordIcon,
-  MenuShipIcon,
-  MenuTwitterIcon,
+  MenuIcon,
   MobileMenuContainer,
   MobileMenuLinkItem,
   MobileMenuLogo,
@@ -35,23 +33,23 @@ const MobileMenu = ({ onClose }) => {
           </MobileMenuLinkItem>
           <MobileMenuLinkItem>
             <HeaderLink type="button">
-              <MenuDiscordIcon width={16} height={16}>
+              <MenuIcon width={16} height={16}>
                 <use href={`${sprite}#icon-discord-logo`}></use>
-              </MenuDiscordIcon>
+              </MenuIcon>
             </HeaderLink>
           </MobileMenuLinkItem>
           <MobileMenuLinkItem>
             <HeaderLink type="button">
-              <MenuShipIcon width={16} height={16}>
+              <MenuIcon width={16} height={16}>
                 <use href={`${sprite}#icon-ship`}></use>
-              </MenuShipIcon>
+              </MenuIcon>
             </HeaderLink>
           </MobileMenuLinkItem>
           <MobileMenuLinkItem>
             <HeaderLink type="button">
-              <MenuTwitterIcon width={16} height={16}>
+              <MenuIcon width={16} height={16}>
                 <use href={`${sprite}#icon-twitter-logo`}></use>
-              </MenuTwitterIcon>
+              </MenuIcon>
             </HeaderLink>
           </MobileMenuLinkItem>
         </HeaderLinkList>

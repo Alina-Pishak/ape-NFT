@@ -49,6 +49,7 @@ export const FaqItem = styled.li`
     font-size: 12px;
     line-height: 1.67;
     color: ${({ open }) => (open ? "inherit" : "var(--color-brand)")};
+    transition: color var(--transition-dur-and-func);
   }
   border-radius: 12px;
   width: ${({ open }) => (open ? "100%" : "200px")};
@@ -56,6 +57,11 @@ export const FaqItem = styled.li`
     open ? "var(--color-secondary)" : "transparent"};
   padding: ${({ open }) => (open ? "8px" : 0)};
   margin-bottom: 16px;
+  &:hover {
+    &::before {
+      color: var(--color-primary);
+    }
+  }
   @media (min-width: 768px) {
     width: ${({ open }) => (open ? "100%" : "393px")};
     padding: ${({ open }) => (open ? "18px 16px 23px 183px" : 0)};
@@ -85,6 +91,10 @@ export const FaqItemTitle = styled.h3`
   text-transform: uppercase;
   color: ${({ open }) => (open ? "var(--color-brand)" : "inherit")};
   margin-bottom: 10px;
+  transition: color var(--transition-dur-and-func);
+  &:hover {
+    color: var(--color-brand);
+  }
   @media (min-width: 768px) {
     font-size: 32px;
     margin-bottom: 12px;

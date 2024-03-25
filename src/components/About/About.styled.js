@@ -26,7 +26,6 @@ export const AboutTitle = styled.h2`
   font-size: 40px;
   line-height: 1;
   text-transform: uppercase;
-  /* margin: 0 auto; */
   margin-bottom: 16px;
   text-align: start;
   width: 216px;
@@ -48,23 +47,17 @@ export const AboutTitleDecorate = styled.span`
   font-size: 40px;
   line-height: 1;
   text-transform: uppercase;
-  /* margin: 0 auto; */
-  /* margin-bottom: 16px;
-  text-align: start;
-  width: 216px; */
   @media (min-width: 768px) {
     font-size: 60px;
-    /* width: 269px; */
-    /* margin: 0; */
   }
   @media (min-width: 1280px) {
     font-size: 120px;
-    /* width: 538px; */
   }
 `;
 
 export const AboutText = styled.p`
   font-family: "Messina Sans", sans-serif;
+  font-weight: 400;
   font-size: 16px;
   line-height: 1.19;
   text-transform: uppercase;

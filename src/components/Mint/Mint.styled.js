@@ -15,6 +15,7 @@ export const MintSection = styled.section`
 
 export const MintText = styled.p`
   font-family: "Messina Sans", sans-serif;
+  font-weight: 400;
   font-size: 16px;
   line-height: 1.19;
   text-transform: uppercase;
@@ -33,6 +34,7 @@ export const MintText = styled.p`
 `;
 
 export const MintBtn = styled.button`
+  font-family: inherit;
   font-weight: 900;
   font-size: 16px;
   line-height: 1.19;
@@ -44,6 +46,10 @@ export const MintBtn = styled.button`
   width: 216px;
   height: 41px;
   margin: 0 auto;
+  transition: color var(--transition-dur-and-func);
+  &:hover {
+    color: #1e1e1e;
+  }
   @media (min-width: 768px) {
     width: 247px;
   }
@@ -57,7 +63,7 @@ export const MintBtn = styled.button`
 `;
 
 export const MintInput = styled.input`
-  font-family: "Messina Sans", sans-serif;
+  font-family: "Messina Sans", sans-serif, sans-serif;
   font-weight: 400;
   font-size: 12px;
   line-height: 1.17;

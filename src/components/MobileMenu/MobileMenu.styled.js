@@ -12,12 +12,14 @@ export const MobileMenuContainer = styled.div`
   flex-direction: column;
   background-color: var(--color-secondary);
   padding-top: 54px;
-  /* transition: opacity var(--transition-dur-and-func),
-    visiblity var(--transition-dur-and-func); */
 `;
 
 export const MobileMenuLogo = styled.svg`
   fill: #fff;
+  transition: fill var(--transition-dur-and-func);
+  &:hover {
+    fill: var(--color-brand);
+  }
 `;
 
 export const MobileMenuLinkItem = styled(HeaderLinkItem)`
@@ -26,18 +28,18 @@ export const MobileMenuLinkItem = styled(HeaderLinkItem)`
 
 export const CloseMenuBtn = styled(MenuBtn)`
   color: #fff;
+  transition: color var(--transition-dur-and-func);
+  &:hover {
+    color: var(--color-brand);
+  }
 `;
 
-export const MenuDiscordIcon = styled.svg`
+export const MenuIcon = styled.svg`
   fill: #fff;
-`;
-
-export const MenuShipIcon = styled.svg`
-  fill: #fff;
-`;
-
-export const MenuTwitterIcon = styled.svg`
-  fill: #fff;
+  transition: fill var(--transition-dur-and-func);
+  &:hover {
+    fill: var(--color-brand);
+  }
 `;
 
 export const NavList = styled.ul`
@@ -58,4 +60,8 @@ export const NavLink = styled.a`
   font-size: 24px;
   line-height: 1.2;
   color: var(--color-primary);
+  transition: color var(--transition-dur-and-func);
+  &:hover {
+    color: var(--color-brand);
+  }
 `;

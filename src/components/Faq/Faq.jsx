@@ -46,21 +46,8 @@ const Faq = () => {
                 srcSet={`${img[0]} 1x,${img[1]} 2x`}
                 media="(max-width: 767px)"
               />
-              <FaqImg
-                src={img[0]}
-                alt="Monkey"
-                // width={148}
-                // height={183}
-                open={open}
-              />
+              <FaqImg src={img[0]} alt="Monkey" open={open} />
             </picture>
-            {/* <FaqImg
-              src={img}
-              alt="Monkey"
-              width={148}
-              height={183}
-              open={open}
-            /> */}
             <div>
               <FaqItemTitle open={open}>{question}</FaqItemTitle>
               <FaqItemText open={open}>{answer}</FaqItemText>

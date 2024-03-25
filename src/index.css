@@ -7,34 +7,55 @@
   --color-background: #181818;
   --color-background-action-dark: rgba(30, 30, 30, 0.1);
   --color-background-action-light: rgba(255, 255, 255, 0.1);
+  --color-hover: #fff;
+  --transition-dur-and-func: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 @font-face {
   font-family: "Biro Script";
+  font-weight: 400;
   src: local("Biro Script Plus"),
-    url("./fonts/BiroScript/BiroScriptPlus.ttf") format("truetype"),
-    url('./fonts/BiroScript/BiroScriptPlus.eot') format('embedded-opentype'),
-    url('./fonts/BiroScript/BiroScriptPlus.woff') format('woff'),
-    url('./fonts/BiroScript/BiroScriptPlus.woff2') format('woff2'),
     url("./fonts/BiroScript/BiroScriptPlus-Bold.ttf") format("truetype"),
     url('./fonts/BiroScript/BiroScriptPlus-Bold.eot') format('embedded-opentype'),
     url('./fonts/BiroScript/BiroScriptPlus-Bold.woff') format('woff'),
-    url('./fonts/BiroScript/BiroScriptPlus-Bold.woff2') format('woff2'),
+    url('./fonts/BiroScript/BiroScriptPlus-Bold.woff2') format('woff2')
 }
+
+@font-face {
+  font-family: "Messina Sans Dark";
+  font-weight: 400;
+  src: local("Messina Sans Dark"),
+    url('./fonts/MessinaSans/MessinaSansMono-Regular.ttf') format('true-type'),
+    url('./fonts/MessinaSans/MessinaSansMono-Regular.eot') format('embedded-opentype'),
+    url('./fonts/MessinaSans/MessinaSansMono-Regular.woff') format('woff'),
+    url('./fonts/MessinaSans/MessinaSansMono-Regular.woff2') format('woff2')
+}
+
 @font-face {
   font-family: "Messina Sans";
+  font-weight: 400;
   src: local("Messina Sans"),
-    url('./fonts/MessinaSans/MessinaSansMono-Regular.ttf') format('true-type')
+    url('./fonts/MessinaSans/MessinaSansMono-Light.ttf') format('true-type'),
+    url('./fonts/MessinaSans/MessinaSansMono-Light.eot') format('embedded-opentype'),
+    url('./fonts/MessinaSans/MessinaSansMono-Light.woff') format('woff'),
+    url('./fonts/MessinaSans/MessinaSansMono-Light.woff2') format('woff2')
 }
+
+@font-face {
+  font-family: "Messina Sans";
+  font-weight: 600;
+  src: local("Messina Sans"),
+    url('./fonts/MessinaSans/MessinaSansMono-SemiBold.ttf') format('true-type'),
+    url('./fonts/MessinaSans/MessinaSansMono-SemiBold.eot') format('embedded-opentype'),
+    url('./fonts/MessinaSans/MessinaSansMono-SemiBold.woff') format('woff'),
+    url('./fonts/MessinaSans/MessinaSansMono-SemiBold.woff2') format('woff2')
+}
+
 @font-face {
   font-family: "Right Grotesk";
+  font-weight: 900;
   src: local("RightGrotesk"),
-    url('./fonts/RightGrotesk/RightGrotesk-CompactBlack.otf') format('opentype'), 
-    url('./fonts/RightGrotesk/RightGrotesk-Medium.otf') format('opentype'),
-    url('./fonts/RightGrotesk/RightGrotesk-NarrowLight.otf') format('opentype'),
-    url('./fonts/RightGrotesk/rightgrotesk-spatialblack.otf') format('opentype'),
-    url('./fonts/RightGrotesk/RightGrotesk-TightMedium.otf') format('opentype')
-    url('./fonts/RightGrotesk/RightGrotesk-WideMedium.otf') format('opentype')  
+  url('./fonts/RightGrotesk/RightGrotesk-CompactBlack.otf') format('opentype')  
 }
 
 *,
@@ -46,6 +67,7 @@
 body {
   margin: 0;
   font-family: "Right Grotesk", sans-serif;
+  font-weight: 900;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: var(--color-background);
@@ -86,7 +108,6 @@ a {
 }
 
 .container {
-  /* max-width: 480px; */
   max-width: 360px;
   padding-left: 72px;
   padding-right: 72px;
