@@ -33,7 +33,7 @@ export const FaqImg = styled.img`
 `;
 
 export const FaqList = styled.ol`
-  counter-increment: faq-counter;
+  counter-increment: faq-counter 0;
 `;
 
 export const FaqItem = styled.li`
@@ -48,6 +48,7 @@ export const FaqItem = styled.li`
     font-weight: 400;
     font-size: 12px;
     line-height: 1.67;
+    letter-spacing: 5px;
     color: ${({ open }) => (open ? "inherit" : "var(--color-brand)")};
     transition: color var(--transition-dur-and-func);
   }
@@ -71,6 +72,7 @@ export const FaqItem = styled.li`
     &::before {
       font-size: 16px;
       line-height: 1.69;
+      letter-spacing: 7px;
     }
   }
   @media (min-width: 1280px) {
@@ -80,6 +82,7 @@ export const FaqItem = styled.li`
     &::before {
       font-size: 24px;
       line-height: 1.67;
+      letter-spacing: 10px;
     }
   }
 `;
