@@ -36,9 +36,11 @@ export const HeroTitle = styled.h1`
   @media (min-width: 768px) {
     font-size: 92px;
     text-align: justify;
+    word-spacing: 155px;
   }
   @media (min-width: 1280px) {
     font-size: 164px;
+    word-spacing: 240px;
   }
 `;
 
@@ -61,12 +63,13 @@ export const HeroImg = styled.img`
     width: 283px;
     height: 386px;
     bottom: 0;
-    left: 30%;
+    left: 28%;
     position: absolute;
   }
   @media (min-width: 1280px) {
     width: 463px;
     height: 612px;
+    left: 32%;
   }
 `;
 
