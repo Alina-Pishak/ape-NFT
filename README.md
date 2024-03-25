@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <a href="https://ape-nft-mvp.netlify.app"><img src="./public/ape-nft-favicon" alt="Ape NFT" width="50"></a>
+  <a href="https://ape-nft-mvp.netlify.app"><img src="./public/ape-nft-favicon.png" alt="Ape NFT" width="50"></a>
   <br>
 Medicine Delivery App
   <br>
