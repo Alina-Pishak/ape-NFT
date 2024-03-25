@@ -2,7 +2,7 @@
   <br>
   <a href="https://ape-nft-mvp.netlify.app"><img src="./public/ape-nft-favicon.png" alt="Ape NFT" width="50"></a>
   <br>
-Medicine Delivery App
+Ape NFT
   <br>
 </h1>
 
