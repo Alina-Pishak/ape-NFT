@@ -6,6 +6,8 @@ Ape NFT
   <br>
 </h1>
 
+[Link](https://www.figma.com/design/NhwvCnRetLh4PsJY3rD2d6/Ape-NFT?node-id=0-1&t=gURapV4LI3eEve6M-0) to design layout
+
 ## How To Use
 
 To clone and run this application, you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
